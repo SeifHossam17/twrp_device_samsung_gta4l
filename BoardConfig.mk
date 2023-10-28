@@ -41,6 +41,18 @@ ENABLE_SCHEDBOOST := true
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := gta4l
+AB_OTA_UPDATER := true
+AB_OTA_PARTITIONS += \
+    vbmeta \
+    vbmeta_system \
+    vbmeta_vendor \
+    dtbo \
+    boot \
+    system \
+    system_ext \
+    vendor \
+    product
+BOARD_USES_RECOVERY_AS_BOOT := true
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := SRPTD23A003
@@ -157,16 +169,19 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
+TW_INCLUDE_FASTBOOTD := true
+TW_FRAMERATE := 60
 TW_USE_TOOLBOX := true
-TW_USE_NEW_MINADBD := true
 TW_INCLUDE_RESETPROP := true
 TW_INCLUDE_NTFS_3G := true
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
+RECOVERY_SDCARD_ON_DATA := true
 TW_NO_BIND_SYSTEM := true
 TW_NO_EXFAT := false
 TW_NO_EXFAT_FUSE := false
 TW_NO_HAPTICS := true
 TW_NO_LEGACY_PROPS := true
 TWRP_INCLUDE_LOGCAT := true
+BUILD_BROKEN_MISSING_REQUIRED_MODULES := true

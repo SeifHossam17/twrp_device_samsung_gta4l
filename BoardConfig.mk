@@ -42,16 +42,6 @@ ENABLE_SCHEDBOOST := true
 # Assert
 TARGET_OTA_ASSERT_DEVICE := gta4l
 AB_OTA_UPDATER := true
-AB_OTA_PARTITIONS += \
-    vbmeta \
-    vbmeta_system \
-    vbmeta_vendor \
-    dtbo \
-    boot \
-    system \
-    system_ext \
-    vendor \
-    product
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := SRPTD23A003
